@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BorderBox</title>
+	<style type="text/css">
+		#container{
+			margin-right: auto; /* auto margins used to center elements*/
+			margin-left:auto;
+			width: 960px;
+			padding: 10px;
+			border-radius: 10px;
+			font-size:0;
+		}
+		.box{
+			width: 100%;
+			height: 150px;
+			background-color: #81BBC9;
+			border-radius: 10px;
+			display: block;
+			font-size:16px;
+			text-align: center;
+			padding-top: 20px;
+		}
+		#Sidebar, #Content{
+			height: auto;
+			display: inline-block;
+			width:470px;
+			margin-top:20px;
+			margin-bottom: 20px;
+			border:10px solid grey;
+		}
+		#Sidebar{
+			margin-right: 10px;
+			padding-right: 40px;
+			padding-left: 40px;
+			-webkit-box-sizing: border-box; 
+   			-moz-box-sizing: border-box;
+    		box-sizing: border-box;
+    		/*box-sizing:border takes defined width and gives proportion to content, padding and border. e.g. width here for sidebar is 470px - and calculating left to right we have total padding of 80px and total border of 20px. Border-box automatically calcs content width to 370px (470-80-20=370px). NB Border box does NOT influence margin.*/
+		}
+		#Content{
+			margin-left: 10px;
+			padding-right: 40px;
+			padding-left: 40px;
+			-webkit-box-sizing: border-box;
+   			-moz-box-sizing: border-box;
+    		box-sizing: border-box;
+		}
+		h1, h2{
+			margin: 0px;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="box">
+			<h1>Header</h1>
+		</div>
+		<div id="Sidebar" class="box">
+			<h2>Sidebar</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<div id="Content" class="box">
+			<h2>Content</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<div class="box">
+			<h2>Footer</h2>
+		</div>
+		<!--<header></header>
+		<div id="Sidebar"></div>
+		<div id="My Important Content"></div>
+		<footer></footer>-->
+	</div>
+
+
+</body>
+</html>

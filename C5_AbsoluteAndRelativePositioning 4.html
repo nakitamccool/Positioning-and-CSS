@@ -1,0 +1,133 @@
+<!--OPTION 1 SETTING CONTAINER AND BOX AS RELATIVE-->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Position and Flow</title>
+		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+			body{
+				font-family: roboto;
+			}
+			
+			#container
+			{
+				position: relative;/*must be set to relative to allow for absolute positioning boxes*/
+				top:100px;
+				margin-right:auto; /*center container with margins left & right set to auto*/
+				margin-left:auto;
+				width:600px;	/*to center an element it must have a fixed width*/
+				height: 400px;
+				background-color:#AA4639;
+				border-radius: 10px;
+				padding: 10px;
+				font-size: 0;	/* remove inline-block spacing*/
+			}
+			.box{
+				display: inline-block;
+				position: absolute;/* allows boxes to overlap the container when offset aginst the conatiner*/
+				width: 220px;
+				height: 150px;
+				text-align: center;
+				background-color: #81BBC9;
+				margin:10px;
+				border-radius:10px;
+				font-size: 35px;
+			}
+			#box1{
+				
+				top: -50px;
+				left: -100px;
+			}
+			#box2{
+				
+				top: -50px;
+				right: -100px;
+			}
+			#box3{
+				
+				bottom: -50px;
+				left: -100px;
+			}
+			#box4{
+				
+				bottom: -50px;
+				right: -100px;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="box1" class="box"><h2>1</h2></div>
+			<div id="box2" class="box"><h2>2</h2></div>
+			<div id="box3" class="box"><h2>3</h2></div>
+			<div id="box4" class="box"><h2>4</h2></div>
+		</div>
+
+		
+
+	</body>
+</html>
+
+
+<!--OPTION 2 SETTING CONTAINER AND BOX AS RELATIVE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Absolute and Relative Positioning 4</title>
+	<style type="text/css">
+		#container{
+			margin-right: auto; /* auto margins used to center elements*/
+			margin-left:auto;
+			height: 400px;
+			width: 600px;
+			background-color: #AA4639;
+			padding: 10px;
+			border-radius: 10px;
+			font-size:0;
+			position:relative;
+		}
+		.box{
+			display: inline-block;
+			position: relative;/*needs to be relative*/
+			width: 220px;
+			height: 150px;
+			background-color: #81BBC9;
+			margin: 10px;
+			border-radius: 10px;
+			font-size:16px;
+			text-align: center;
+		}
+		#Box1{
+			top:-100px; /*offsets box1 relative to container*/
+			left:-100px; /*offsets box1 relative to container*/
+
+		}
+		#Box2{
+			top:-100px; /*offsets box2 relative to container*/
+			left:220px; /*offsets box2 relative to box1*/
+			
+		}
+		#Box3{
+			top:160px; /*offsets box3 relative to box1*/
+			left:-100px; /*offsets box3 relative to container*/
+		}
+		#Box4{
+			top:160px; /*offsets box4 relative to box2*/
+			left:220px; /*offsets box4 relative to box3*/
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="Box1" class="box">ONE</div>
+		<div id="Box2" class="box">TWO</div>
+		<div id="Box3" class="box">THREE</div>
+		<div id="Box4" class="box">FOUR</div>
+	</div>
+
+
+</body>
+</html>-->

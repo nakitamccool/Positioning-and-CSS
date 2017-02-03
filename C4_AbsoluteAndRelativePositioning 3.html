@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Absolute and Relative Positioning 3</title>
+	<style type="text/css">
+		#container{
+			margin-right: auto; /* auto margins used to center elements*/
+			margin-left:auto;
+			height: 400px;
+			width: 600px;
+			background-color: #AA4639;
+			padding: 10px;
+			border-radius: 10px;
+			font-size:0;
+			position:relative;
+		}
+		.box{
+			display: inline-block;
+			position: relative;/*needs to be relative*/
+			width: 220px;
+			height: 150px;
+			background-color: #81BBC9;
+			margin: 10px;
+			border-radius: 10px;
+			font-size:16px;
+			text-align: center;
+		}
+		#Box1{
+			top:0px; /*offsets box relative to container*/
+			left:0px; /*offsets box relative to container*/
+
+		}
+		#Box2{
+			top:0px; /*offsets box relative to container*/
+			left:120px; /*offsets box2 relative to box1*/
+			
+		}
+		#Box3{
+			top:60px; /*offsets box3 relative to box1*/
+			left:0px; /*offsets box3 relative to container*/
+		}
+		#Box4{
+			top:60px; /*offsets box4 relative to box2*/
+			left:120px; /*offsets box4 relative to box3*/
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="Box1" class="box">ONE</div>
+		<div id="Box2" class="box">TWO</div>
+		<div id="Box3" class="box">THREE</div>
+		<div id="Box4" class="box">FOUR</div>
+	</div>
+
+
+</body>
+</html>
